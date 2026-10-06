@@ -11,7 +11,7 @@ model/*.bin
 *.pt
 
 # Chroma Vector Store & DB files (rebuilt via script)
-Vectorstore/
+
 *.sqlite3
 
 # Python bytecode & cache
