@@ -1,0 +1,29 @@
+# Environments & Secrets
+.env
+.venv/
+venv/
+ENV/
+
+# Large Model Weights (NEVER push .gguf or .bin to Git)
+model/*.gguf
+model/*.bin
+*.pth
+*.pt
+
+# Chroma Vector Store & DB files (rebuilt via script)
+Vectorstore/
+*.sqlite3
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# OS generated files
+.DS_Store
+Thumbs.db

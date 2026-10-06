@@ -1,0 +1,32 @@
+winget install Python.Python.3.11
+py -3.11 -m venv .venv                          (Creats a virtual environment)
+.venv\Scripts\Activate.ps1                      (Activate the virtual environment)    to deactivate venv write - "deactivate"
+python -m pip install --upgrade pip 
+pip install -r requirement.txt
+
+Download : 'https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q2_K.gguf' , mistral model from here
+
+
+
+pip install "numpy<2"
+
+
+pip install --upgrade gradio
+
+pip install --upgrade transformers tokenizers sentence-transformers huggingface-hub
+
+
+how to rebuild db:
+# In the terminal running main.py, press Ctrl+C
+# Or force-kill:
+Get-Process python | Stop-Process -Force
+
+
+-> Drop your PDF into source_data\
+-> & "d:/Code/Rag Chatbot/.venv/Scripts/python.exe" "d:/Code/Rag Chatbot/rebuild_vectorstore.py"  (rebuild)
+-> & "d:/Code/Rag Chatbot/.venv/Scripts/python.exe" "d:/Code/Rag Chatbot/main.py"   (run)
+
+note : The rebuild_vectorstore.py script must be run from the project root (d:\Code\Rag Chatbot) so the .env paths resolve correctly.
+
+IMPORTANT: Always stop main.py BEFORE rebuilding the vectorstore.
+Windows locks the Chroma DB files while main.py is running, causing the rebuild to silently save 0 chunks.
