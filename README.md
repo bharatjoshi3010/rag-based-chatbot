@@ -1,7 +1,7 @@
 # 🤖 RAG Document Chatbot
 
 > **Chat with your own PDFs using AI!**  
-> An intelligent, document-powered chatbot that reads your documents and answers questions accurately with zero guessing—all through a sleek, modern ChatGPT-like web interface.
+> An intelligent, document-powered chatbot that reads your documents and answers questions accurately with zero guessing, all through a sleek, modern ChatGPT-like web interface.
 
 ---
 
