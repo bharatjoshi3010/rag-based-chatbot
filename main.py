@@ -46,14 +46,14 @@ async def serve_index():
 
 # API route with conversation history context
 @app.post("/api/chat", response_model=ChatResponse)
-async def chat_api(req: ChatRequest):
+def chat_api(req: ChatRequest):
     reply = predict_rag(req.message, history=req.history)
     return {"response": reply}
 
 
 # Legacy API route
 @app.post("/predict", response_model=Response)
-async def predict_api(prompt: Request):
+def predict_api(prompt: Request):
     reply = predict_rag(prompt.prompt)
     return {"response": reply}
 

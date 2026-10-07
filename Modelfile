@@ -1,0 +1,4 @@
+FROM ./model/mistral-7b-instruct-v0.1.Q2_K.gguf
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "</s>"

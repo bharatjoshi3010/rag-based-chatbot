@@ -1,0 +1,16 @@
+run this in terminal : pip install langchain-ollama
+
+install Ollama:
+-> irm https://ollama.com/install.ps1 | iex   (run this cmd in your powershell terminal)    -->  after this restart your terminals (ollama --versions)
+
+
+Create a Modelfile
+In your project root (d:\Code\Rag Chatbot), create a file named Modelfile (no extension) with this single line: FROM ./model/mistral-7b-instruct-v0.1.Q2_K.gguf
+
+run :   ollama create mistral-local -f Modelfile      (Ollama will parse and import your .gguf file into its local registry under the name mistral-local without downloading anything from the internet.)
+
+
+test it  : ollama run mistral-local     (after this you can exit by typing /bye)
+
+
+In your .env file, set: OLLAMA_MODEL="mistral-local"
