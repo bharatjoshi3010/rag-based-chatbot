@@ -322,3 +322,8 @@ Open `utils/inference.py` and modify `_template` (starting around line 11). You 
 ## 📄 License
 
 This project is open-source and free to use for personal, educational, and commercial purposes. Feel free to fork, adapt, and build on top of it!
+
+
+
+
+Update : Added Ollama for faster inference (for more details you can refer to makingTheInferenceFaster.txt) (from 5 min to 7-10sec)
